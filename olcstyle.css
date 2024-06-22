@@ -1,0 +1,178 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:linear-gradient(#fafafa, #067408);
+  }
+  
+  .sell_form{
+    max-width: 500px;
+    margin:auto;
+    padding:20px;
+    border:0.5px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+    background:radial-gradient(#07cf1f, #ceeeba)
+  }
+  
+  .heading{
+    max-width: 350px;
+    margin: auto;
+    padding: 1px;
+    border: 2px solid;
+    border-color: green;
+    border-radius: 55px;
+    box-shadow: 0 0 8px;
+    background: linear-gradient(white, #9ad69a);
+  }
+  
+  .title{
+    height: 25px;
+    width: 100%;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .title:hover{
+    transform: scale(1.04);
+  }
+  
+  .desc{
+    height: 60px;
+    width: 100%;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  
+  }
+  
+  .desc:hover{
+    transform: scale(1.04);
+  }
+  
+  .bran{
+    height: 25px;
+    width: 100%;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .bran:hover{
+    transform: scale(1.04); 
+  }
+  
+  .Num{
+    width:100%;
+    height: 25px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .Num:hover{
+    transform: scale(1.04);
+  }
+  
+  .Date{
+    width:100%;
+    height: 25px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .Date:hover{
+    transform: scale(1.04);
+  }
+  
+  .Pri{
+    width: 100%;
+    height: 25px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .Pri:hover{
+    transform: scale(1.04);
+  }
+  
+  .Pics{
+    width: 100%;
+    height: 25px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 2.5px;
+    transition:transform 0.3s;
+  }
+  
+  .Pics:hover{
+    transform: scale(1.04);
+  }
+  
+  
+  .Nam{
+    width: 100%;
+    height: 25px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .Nam:hover{
+    transform:scale(1.04);
+  }
+  
+  .Ph{
+    width: 100%;
+    height: 25px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .Ph:hover{
+    transform:scale(1.04);
+  }
+  
+  .ema{
+    width: 100%;
+    height: 25px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .ema:hover{
+    transform:scale(1.04);
+  }
+  
+  .add{
+    width: 100%;
+    height: 25px;
+    border: 0.5px solid;
+    border-radius: 5px;
+    transition:transform 0.3s;
+  }
+  
+  .add:hover{
+    transform:scale(1.04);
+  }
+  
+  .post{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    text-size-adjust: 75%;
+    transition:transform 0.3s;
+    cursor:pointer;
+  }
+  
+  .post:hover{
+    transform:scale(1.04); background-color: #043904;
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sell Here!</title>
+  <link href="olcstyle.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="sell_form">
+    <div class="heading">
+      <h1 align="center">Sell Your Items Here</h1>
+    </div>
+    <br>
+    <h3>Item Title</h3>
+    <input type="text" placeholder="Enter Title" class="title">
+    <br>
+    <h3>Item Description</h3>
+    <input type="text" placeholder="Enter Description" class="desc">
+    <br>
+    <h3>Brand(if any)</h3>
+    <input type="text" placeholder="Enter Brand" class="bran">
+    <br>
+    <h3>Selling Price</h3>
+    <input type="number" placeholder="Enter selling price" class="Num">
+    <br>
+    <h3>Buying Date</h3>
+    <input type="date" placeholder="Enter buying date" class="Date">
+    <br>
+    <h3>Buying Price</h3>
+    <input type="number" placeholder="Enter Buying Price" class="Pri">
+    <br>
+    <h3>Images</h3>
+    <input type="file" accept="image/*" multiple class="Pics"><br>
+    <h6>*Press Ctrl and select to upload multiple images</h6>
+    <br>
+  
+    <h2>Personal Details</h2>
+    <h3>Name</h3>
+    <input type="text" placeholder="Enter your name" class="Nam">
+    <br>
+    <h3>Contact Details</h3>
+    <input type="number" placeholder="Enter contact no." class="Ph">
+    <br><br>
+    <input type="email" placeholder="Enter email id" class="ema">
+    <br>
+    <h3>Location</h3>
+    <input type="text" placeholder="Enter address" class="add">
+    <br><br>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <button type="submit" class="post">POST</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
