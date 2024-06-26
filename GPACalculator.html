@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            margin-bottom: 20px;
+            height: auto;
+            width: auto;
+        }
+        .course-input {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .course-input input, .course-input select {
+            margin-right: 10px;
+            padding: 5px;
+            width: 120px;
+        }
+        .result {
+            font-weight: bold;
+            font-size: large;
+            color: green;
+        }
+
+        #numCourses{
+            width: 400px;
+            height: 55px;
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            padding: 1px;
+
+        }
+        h2{
+            color: grey;
+        }
+
+        .button{
+            width: 90px;
+            height: 55px;
+            background-color: rgb(17, 90, 215);
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .course-credit,
+        .course-grade{
+            width: 400px;
+            height: 55px;
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+    
+        }
+
+        .generate{
+            width: 90px;
+            height: 55px;
+            background-color: red;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>CGPA Calculator</h1>
+    <div class="container">
+        <label for="numCourses"><h2>Enter number of gradable courses in current semester:</h2></label>
+        <input type="number" id="numCourses" min="1" placeholder="Enter number of courses">
+        <button class="button" onclick="generateCourseInputs()">Submit</button>
+    </div>
+    <div id="courseInputs"></div>
+    <button class="generate" onclick="calculateCGPA()">Calculate CGPA</button>
+    <p id="result" class="result"></p>
+
+    <script>
+        function generateCourseInputs() {
+            const numCourses = document.getElementById('numCourses').value;
+            const courseInputsDiv = document.getElementById('courseInputs');
+            courseInputsDiv.innerHTML = ''; // Clear previous inputs
+
+            for (let i = 0; i < numCourses; i++) {
+                const courseInput = document.createElement('div');
+                courseInput.className = 'course-input';
+                courseInput.innerHTML = `
+                    <input type="number" class="course-credit" placeholder="Course Credit" min="1">
+                    <select class="course-grade">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="P">P</option>
+                        <option value="F">F</option>
+                    </select>
+                `;
+                courseInputsDiv.appendChild(courseInput);
+            }
+        }
+
+        function calculateCGPA() {
+            const credits = document.getElementsByClassName('course-credit');
+            const grades = document.getElementsByClassName('course-grade');
+            let totalCredits = 0;
+            let totalPoints = 0;
+
+            for (let i = 0; i < credits.length; i++) {
+                const credit = parseFloat(credits[i].value);
+                const grade = grades[i].value.toUpperCase();
+
+                if (!isNaN(credit) && getGradePoint(grade) !== null) {
+                    totalCredits += credit;
+                    totalPoints += credit * getGradePoint(grade);
+                }
+            }
+
+            const cgpa = totalPoints / totalCredits;
+            document.getElementById('result').innerText = `Your CGPA is: ${cgpa.toFixed(2)}`;
+        }
+
+        function getGradePoint(grade) {
+            const gradePoints = {
+                'O': 10.0,
+                'A+': 9.0,
+                'A': 8.0,
+                'B+': 7.0,
+                'B': 6.0,
+                'C': 5.0,
+                'P': 4.0,
+                'F': 0.0
+            };
+            return gradePoints[grade] !== undefined ? gradePoints[grade] : null;
+        }
+    </script>
+</body>
+</html>
