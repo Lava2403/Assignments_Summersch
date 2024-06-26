@@ -1,0 +1,88 @@
+body{
+    background-color: cadetblue;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mainbox{
+    background: radial-gradient(white,white);
+    border-radius: 15px;
+    max-width: 550px;
+    height: 250px;
+    margin: auto;
+    border: 2px solid;
+    padding: 40px;
+    box-shadow: 7px;
+    text-align: center;
+    
+  }
+  
+  .box{
+    max-width: 550px;
+    margin: auto;
+    background-color: white;
+    justify-content: center;
+    padding: 10px;
+    
+  }
+  
+  .inpbox{
+   
+    background-color: white;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 10px;
+    margin: auto;
+  }
+  
+  .sub{
+    
+    background-color: cadetblue;
+    border: 1px solid;
+    border-radius: 3px;
+    transition:transform 0.2s;
+  }
+  
+  .sub:hover{
+    transform: scale(1.04); background-color: lightblue ;
+  }
+  
+  .sub:active{
+    background-color: cadetblue;
+  }
+  
+  .mainbox .inputfield{
+    display:flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+  }
+  .inputfield input,
+  .inputfield button{
+    height:50px;
+    outline: none;
+    padding: 0 20px;
+    border-radius: 8px;
+  }
+  
+  .inputfield input{
+    border: 1px solid grey;
+    text-align: center;
+    width: calc(2*100%/3);
+    font-size: 15px;
+    color: dimgrey;
+  }
+  
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button{
+    display: none;
+  }
+  
+  .inputfield button{
+    width: calc(100%/3);
+    cursor: pointer;
+  }
+  
+  
